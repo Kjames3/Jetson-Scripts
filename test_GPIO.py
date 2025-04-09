@@ -6,7 +6,13 @@ pin = 33  # PWM-capable pin
 GPIO.setup(pin, GPIO.OUT)
 
 while True:
-    GPIO.output(pin, GPIO.HIGH)
-    time.sleep(1)
-    GPIO.output(pin, GPIO.LOW)
-    time.sleep(1)
+    try:
+        GPIO.output(pin, GPIO.HIGH)
+        time.sleep(1)
+        GPIO.output(pin, GPIO.LOW)
+        time.sleep(1)
+    except KeyboardInterrupt:
+        print("Stopped by User")
+        GPIO.cleanup()
+        break
+
