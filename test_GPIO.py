@@ -12,7 +12,7 @@ while True:
         GPIO.output(pin, GPIO.LOW)
         time.sleep(1)
     except KeyboardInterrupt:
-        print("Stopped by User")
+        print("\nStopped by User")
         GPIO.cleanup()
         break
 
