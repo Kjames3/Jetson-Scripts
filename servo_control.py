@@ -66,15 +66,12 @@ class PIDController:
         return output
 
 
-def setup_servo():
-    # Set GPIO numbering mode to BOARD
-    GPIO.setmode(GPIO.BOARD)
-   
+def setup_servo(pin):   
     # Set up the pin as PWM output
-    GPIO.setup(SERVO_PIN, GPIO.OUT)
+    GPIO.setup(pin, GPIO.OUT)
    
     # Initialize PWM
-    pwm = GPIO.PWM(SERVO_PIN, FREQ)
+    pwm = GPIO.PWM(pin, FREQ)
     pwm.start(0)  # Start with 0% duty cycle
    
     return pwm
