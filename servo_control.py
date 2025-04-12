@@ -6,10 +6,10 @@ import math
 
 # Servo configuration
 FREQ = 50       # PWM frequency in Hz (50Hz is standard for most servos)
-BASE_PIN = 12
-SHOULDER_PIN = 18
-ELBOW_PIN = 13
-GRIPPER_PIN = 19
+BASE_PIN = 13
+SHOULDER_PIN = 23
+ELBOW_PIN = 12
+GRIPPER_PIN = 5
 
 # Servo pulse width settings (in microseconds)
 MIN_PULSE = 500   # 0 degrees
@@ -189,7 +189,7 @@ def main():
         elbow_pid = PIDController(KP, KI, KD)
         
         # Example: Move to (x, y, z) = (15, 5, 15) cm
-        target_x, target_y, target_z = 15.0, 5.0, 15.0
+        target_x, target_y, target_z = 10.0, 5.0, 5.0
         
         # Calculate IK
         angles = inverse_kinematics(target_x, target_y, target_z)
