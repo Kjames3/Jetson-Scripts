@@ -1,6 +1,6 @@
 # TODO: add pid control to this script to make it more accurate and smooth
 
-import Jetson.GPIO as GPIO
+import RPi.GPIO as GPIO  # Changed for to work for Raspberry Pi
 import time
 
 # Servo configuration
