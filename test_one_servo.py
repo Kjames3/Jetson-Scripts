@@ -33,7 +33,7 @@ try:
         set_angle(90)
 
         # 90 to 0 degrees counter-clockwise
-        # set_angle(0)
+        set_angle(180)
 
         time.sleep(1)
 
