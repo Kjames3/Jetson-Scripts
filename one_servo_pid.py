@@ -76,7 +76,7 @@ def set_angle(angle, pid, current_angle, duration=0.5):
 
 try:
     # Initialize PID controller (tuned for smooth servo control)
-    pid = PIDController(Kp=0.5, Ki=0.1, Kd=0.05)
+    pid = PIDController(Kp=4.85, Ki=0.06, Kd=0.00)
 
     # Initialize estimated current angle
     current_angle = 0
