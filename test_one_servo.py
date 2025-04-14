@@ -17,7 +17,7 @@ pwm.start(0)
 def set_angle(angle):
     duty = 2.5 + (angle / 18.0)
     pwm.ChangeDutyCycle(duty)
-    time.sleep(0.5)
+    time.sleep(0.75)
     pwm.ChangeDutyCycle(0)
 
 try:
@@ -33,7 +33,7 @@ try:
         set_angle(90)
 
         # 90 to 0 degrees counter-clockwise
-        set_angle(0)
+        # set_angle(0)
 
         time.sleep(1)
 
